@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.menu__title {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.menu__block-name-header_green {
+    color: #0FAC4D;
+    text-transform: uppercase;
+}
+
+.menu__outer {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.menu__inner {
+    display: flex;
+    flex-flow: wrap;
+    border: solid black;
+    border-width: 2px 2px 0 0;
+}
+
+.menu__col {
+    display: flex;
+    flex-flow: column;
+    align-content: stretch;
+    border: solid black;
+    border-width: 0 0 2px 2px;
+    padding: 5px;
+}
+
+@media (min-width: 768px) {
+    .menu__col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .menu__col {
+        width: 33.33%;
+    }
+}
+
+.menu__block-delimiter {
+    width: 100%;
+    border: none;
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
+.menu__block {
+    display: flex;
+    flex-flow: wrap;
+    flex-grow: 1;
+    align-items: stretch;
+    position: relative;
+}
+
+.menu__block_no-grow {
+    flex-grow: 0;
+}
+
+.menu__block-header {
+    display: flex;
+    width: 100%;
+}
+
+.menu__block-name-header {
+    width: 80%;
+    margin: 0;
+    padding: 5px 10% 5px 5px;
+    border: solid black;
+    border-width: 0 1px 1px 0;
+}
+
+.menu__block-name-header-full {
+    width: 100%;
+    margin: 0;
+    padding: 5px 20% 5px 5px;
+    border: solid black;
+    border-width: 0 0 1px 0;
+}
+
+.menu__block-value-header {
+    width: 10%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.menu__block-value-header::before {
+    content: "объем, мл";
+}
+
+.menu__block-price-header {
+    width: 10%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.menu__block-price-header::before {
+    content: "цена, гривны";
+}
+
+.menu__item {
+    display: flex;
+    width: 100%;
+}
+
+.menu__item-small {
+    display: flex;
+    width: 50%;
+}
+
+.menu__item-small_left-border {
+    border: solid black;
+    border-width: 0 0 0 1px;
+}
+
+.menu__item-name {
+    width: 80%;
+    padding: 5px;
+    border: solid black;
+    border-width: 0 1px 0 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.menu__item-name-with-description {
+    width: 80%;
+    padding: 5px;
+    border: solid black;
+    border-width: 0 1px 0 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.menu__item-name-with-description-name {
+    display: block;
+}
+
+.menu__item-name-with-description-name::after {
+    content: " . .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+}
+
+.menu__item-name-with-description-description {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.menu__item-name::after {
+    content: " . .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+}
+
+.menu__item-name_bold {
+    font-weight: bold;
+}
+
+.menu__item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.menu__item-price::before {
+    content: "125";
+}
+
+.menu__item-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 5px;
+}
+
+.menu__item-value::before {
+    content: "1000";
+}
+
+.menu__item-name_small {
+    width: 60%;
+}
+.menu__item-value_small {
+    width: 20%;
+}
+.menu__item-price_small {
+    width: 20%;
+}
+
+.menu__image-1 {
+    width: 100%;
+    height: auto;
+}
+
+.menu__image-2 {
+    width: 40%;
+    height: auto;
+}
+
+.menu__image-1-text {
+    position: absolute;
+    color: #0FAC4D;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    left: 64%;
+    top: 10px;
+}
+
+.menu__image-2-content {
+    width: 60%;
+    padding-left: 5%;
+}
+
+.menu__image-2-heading {
+    color: #0FAC4D;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.menu__image-2-list {
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
+.menu__image-2-value-price {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    top: 86.4%;
+}
