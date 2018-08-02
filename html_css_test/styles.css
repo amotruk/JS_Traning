@@ -4,17 +4,22 @@
     -webkit-box-sizing: border-box;
 }
 
+.menu__col {
+    width: 100%;
+}
+
+@media (min-width: 1025px) {
+    .menu__col {
+        width: 33.33%;
+    }
+}
+
 .menu {
     padding: 10px;
 }
 
 .menu__title {
     font-family: "Lucida Console", Monaco, monospace;
-}
-
-.menu__block-name-header_green {
-    color: #0FAC4D;
-    text-transform: uppercase;
 }
 
 .menu__outer {
@@ -38,18 +43,6 @@
     padding: 5px;
 }
 
-@media (min-width: 768px) {
-    .menu__col {
-        width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .menu__col {
-        width: 33.33%;
-    }
-}
-
 .menu__block-delimiter {
     width: 100%;
     border: none;
@@ -59,6 +52,8 @@
 }
 
 .menu__block {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-flow: wrap;
     flex-grow: 1;
@@ -70,152 +65,96 @@
     flex-grow: 0;
 }
 
-.menu__block-header {
-    display: flex;
-    width: 100%;
-}
-
-.menu__block-name-header {
-    width: 80%;
-    margin: 0;
-    padding: 5px 10% 5px 5px;
-    border: solid black;
-    border-width: 0 1px 1px 0;
-}
-
-.menu__block-name-header-full {
-    width: 100%;
-    margin: 0;
-    padding: 5px 20% 5px 5px;
-    border: solid black;
-    border-width: 0 0 1px 0;
-}
-
-.menu__block-value-header {
-    width: 10%;
-    border: solid black;
-    border-width: 0 0 1px 0;
-    margin: 0;
-    padding: 5px;
-    text-align: center;
-    align-self: flex-end;
-}
-
-.menu__block-value-header::before {
-    content: "объем, мл";
-}
-
-.menu__block-price-header {
-    width: 10%;
-    border: solid black;
-    border-width: 0 0 1px 0;
-    margin: 0;
-    padding: 5px;
-    text-align: center;
-    align-self: flex-end;
-}
-
-.menu__block-price-header::before {
-    content: "цена, гривны";
-}
-
 .menu__item {
     display: flex;
     width: 100%;
 }
 
-.menu__item-small {
-    display: flex;
+.menu__item_small {
     width: 50%;
 }
 
-.menu__item-small_left-border {
+.menu__subitem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.menu__subitem_name-header {
+    width: 80%;
+    margin: 0;
+    padding-right: 10%;
+    border: solid black;
+    border-width: 0 1px 1px 0;
+}
+
+.menu__subitem_name-header-full {
+    width: 100%;
+    margin: 0;
+    padding-right: 20%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+}
+
+.menu__subitem_value-price-header {
+    width: 10%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+    margin: 0;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.menu__subitem_green {
+    color: #0FAC4D;
+    text-transform: uppercase;
+}
+
+.menu__subitem_name {
+    width: 80%;
+    border: solid black;
+    border-width: 0 1px 0 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.menu__subitem_value-price {
+    justify-content: center;
+    width: 10%;
+}
+
+.menu__subitem_bold {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu__subitem_left-border {
     border: solid black;
     border-width: 0 0 0 1px;
 }
 
-.menu__item-name {
-    width: 80%;
-    padding: 5px;
-    border: solid black;
-    border-width: 0 1px 0 0;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.menu__item-name-with-description {
-    width: 80%;
-    padding: 5px;
-    border: solid black;
-    border-width: 0 1px 0 0;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.menu__item-name-with-description-name {
-    display: block;
-}
-
-.menu__item-name-with-description-name::after {
+.menu__subitem_dots::after {
     content: " . .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
 }
 
-.menu__item-name-with-description-description {
-    font-style: italic;
-    font-weight: normal;
+.menu__subitem_100 {
+    width: 100%;
 }
 
-.menu__item-name::after {
-    content: " . .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
-}
-
-.menu__item-name_bold {
-    font-weight: bold;
-}
-
-.menu__item-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.menu__item-price::before {
-    content: "125";
-}
-
-.menu__item-value {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    padding: 5px;
-}
-
-.menu__item-value::before {
-    content: "1000";
-}
-
-.menu__item-name_small {
+.menu__subitem_60 {
     width: 60%;
 }
-.menu__item-value_small {
-    width: 20%;
-}
-.menu__item-price_small {
+
+.menu__subitem_20 {
     width: 20%;
 }
 
-.menu__image-1 {
-    width: 100%;
-    height: auto;
-}
-
-.menu__image-2 {
+.menu__subitem_40 {
     width: 40%;
+}
+
+.menu__img-responsive {
+    width: 100%;
     height: auto;
 }
 
@@ -248,5 +187,5 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    top: 86.4%;
+    bottom: -9px;
 }
