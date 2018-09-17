@@ -1,0 +1,17 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-title {
+  font-size: 22px;
+
+}
+
+.login-page-form {
+  &__row {
+    display: flex;
+  }
+}

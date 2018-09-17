@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-2">
+    <div *ngFor="let widget of widgetsConfig" class="form-check col-12">
+      <input [(ngModel)]="widget.shown" (change)="reloadWidgets()" type="checkbox" class="form-check-input" [id]="widget.type">
+      <label class="form-check-label" [for]="widget.type">{{widget.name}}</label>
+    </div>
+  </div>
+  <div class="card-columns col-8">
+    <ng-template *ngFor="let widget of widgets" #widget></ng-template>
+  </div>
+</div>
